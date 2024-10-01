@@ -9,9 +9,9 @@ published: true
 
     <div class="gallery">
 
-  {% for research_project in site.research_projects %}
+{% for research_project in site.research_projects %}
 
-  {% if research_project.redirect %}
+{% if research_project.redirect %}
 
   <div class="projectTile">
           <a href="{{ research_project.redirect }}" target="_blank">
@@ -26,7 +26,7 @@ published: true
 {% else %}
 
   <div class="projectTile">
-          <a href="{{ research_project.url | prepend: site.baseurl | prepend: site.url }}">
+          <a href="{{ research_project.url | prepend: site.url }}">
           <span>
               <h2>{{research_project.tag }} {{ research_project.title }}</h2>
               <br/>
