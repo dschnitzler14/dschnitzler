@@ -3,7 +3,7 @@
 title: Dr Danny Schnitzler
 description: 👩‍🔬 Post-doctoral Researcher | 🚀 Project Starter | 📍 Edinburgh & Berlin
 
-baseurl: "/" #/gradfolio #name of GitHub repository
+baseurl: "/gradfolio"
 url: "" #custom url to be used instead of GitHub repository
 email: "dschnitzler@outlook.com"
 
