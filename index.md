@@ -31,7 +31,7 @@ published: true
 
 # Hey there! I'm Danny,
 
-a post-doctoral researcher who loves blending science, coding, and creativity. I finished my PhD at the University of Edinburgh ([you can check it out here!](/_research_projects/10_phd)) and now, I’m diving into new research at the Medical School Berlin with [Melanie Stefan](https://melaniestefan.net/). I’m all about learning and growing, and sharing my journey along the way.
+a post-doctoral researcher who loves blending science, coding, and creativity. I finished my PhD at the University of Edinburgh ([you can check it out here!](/_research_projects/10_phd)) and now, I’m diving into new research at the Medical School Berlin with [Melanie Stefan](https://melaniestefan.net/){:target="\_blank"}. I’m all about learning and growing, and sharing my journey along the way.
 
 I grew up in Vienna, Austria, but thanks to my American mum, I’ve always been fluent in English and German. In 2011, I made the leap to Scotland to study Biomedical Science at Aberdeen University. After graduating with my honours degree and integrated masters (MSci), I moved to Edinburgh to kick off my PhD, focusing on anxiety using a prenatal stress rat model. Through the course of my PhD I surprised myself and everyone around me when I really fell in love with coding.
 
@@ -54,7 +54,7 @@ I also have a few personal projects that keep me busy:
 
 ## When I’m not working, I’m probably:
 
-- Out on adventures with my two dogs, [Sid](https://www.instagram.com/sid_wags/) and [Harry](https://www.instagram.com/harry.the.lamb/), exploring beautiful Scotland.
+- Out on adventures with my two dogs, [Sid](https://www.instagram.com/sid_wags/){:target="\_blank"} and [Harry](https://www.instagram.com/harry.the.lamb/){:target="\_blank"}, exploring beautiful Scotland.
 - Buried in a good book (mostly fantasy—[here’s what I’m reading now](reading_blog)).
 - Collecting quirky salt and pepper shakers, because why not?
-- Engrossed in a new creative hobby - crochet, lino cutting/ printing, watercolour, embroidery, ... (not that I'm particularly good at any of these things, but that's not the point)
+- Engrossed in a new creative hobby - crochet, lino cutting/ printing, watercolour, embroidery, ... (not that I'm particularly good at any of these things, but that's not the point) or experimenting with new recipes in the kitchen!
