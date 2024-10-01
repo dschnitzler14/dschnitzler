@@ -1,7 +1,7 @@
 ---
 title:
 layout: default
-permalink: /other_projects/
+permalink: #/other_projects/
 published: true
 ---
 
