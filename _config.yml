@@ -1,0 +1,107 @@
+### your site title here
+
+title: Dr Danny Schnitzler
+description: 👩‍🔬 Post-doctoral Researcher | 🚀 Project Starter | 📍 Edinburgh & Berlin
+
+baseurl: "" #/gradfolio #name of GitHub repository
+url: "" #custom url to be used instead of GitHub repository
+email: "dschnitzler@outlook.com"
+
+# Pagination for the default blog
+paginate: 4
+permalink: /blog/:year/:title/
+paginate_path: /blog/page:num/
+
+# Pagination for the reading_blog
+reading_blog_paginate: 4
+reading_blog_paginate_path: /reading_blog/page:num/
+
+# Social media links in footer
+twitter:
+linkedin:
+stackoverflow:
+github:
+researchgate:
+orcid:
+quora:
+instagram: "dschnitzler14"
+facebook:
+
+# Markdown
+highlighter: rouge
+markdown: kramdown
+
+# Tracker
+analytics:
+
+# optimization -> compress.html
+compress_html:
+  clippings:
+    [
+      html,
+      div,
+      p,
+      ul,
+      td,
+      h1,
+      h2,
+      h3,
+      h4,
+      link,
+      meta,
+      footer,
+      nav,
+      img,
+      header,
+      hr,
+      br,
+      head,
+      style,
+      li,
+      ul,
+      ol,
+      time,
+      main,
+      script,
+      title,
+    ]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+
+# Collections for other content
+collections:
+  research_projects:
+    output: true
+    permalink: /research_projects/:name/
+  other_projects:
+    output: true
+    permalink: /other_projects/:name/
+  bookshelf:
+    output: true
+    permalink: /reading_blog/:path/
+
+sass:
+  sass_dir: /assets/css/_sass
+  style: compressed
+
+include:
+  - _posts
+  - _pages
+  - _research_projects
+  - _other_projects
+  - _bookshelf # Add _bookshelf here to include the folder
+
+exclude:
+  - README.md
+  - LICENSE.md
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-email-protect
+  - jekyll-target-blank
