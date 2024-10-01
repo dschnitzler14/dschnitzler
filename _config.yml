@@ -4,7 +4,7 @@ title: Dr Danny Schnitzler
 description: 👩‍🔬 Post-doctoral Researcher | 🚀 Project Starter | 📍 Edinburgh & Berlin
 
 baseurl: #"/dschnitzler"
-url: "dschnitzler.co.uk" #custom url to be used instead of GitHub repository
+url: #"https://dschnitzler.co.uk" #custom url to be used instead of GitHub repository
 email: "dschnitzler@outlook.com"
 
 # Pagination for the default blog
