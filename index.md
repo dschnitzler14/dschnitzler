@@ -23,7 +23,7 @@ published: true
 </p>
 
 <p>
-  Recent changes to the <a href="https://dschnitzlervercel.vercel.app/"> Digital Garden </a>: <a href="https://dschnitzlervercel.vercel.app/https://dschnitzlervercel.vercel.app/changelog/"> changelog </a>
+  Recent changes to the <a href="https://dschnitzlervercel.vercel.app/"> Digital Garden </a>: <a href="https://dschnitzlervercel.vercel.app/changelog/"> changelog </a>
 </p>
 
 # Hey there! I'm Danny,
