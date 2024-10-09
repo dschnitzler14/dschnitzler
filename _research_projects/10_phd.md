@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PhD Thesis
-description: The Impact of Prenatal Stress and Chronic Stress in Adult Rats on the Brain, Behaviour and Gut Microbiome
+description: Using a Prenatal Stress model to study Anxiety
 tag: 🗄️
 ---
 
