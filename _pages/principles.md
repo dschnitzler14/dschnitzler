@@ -5,7 +5,7 @@ permalink: /principles/
 published: true
 ---
 
-As inspired by [this blog](https://miketannenbaum.com/principles/){:target="\_blank"}, here is an incomplete list of my principles
+As inspired by [Mike Tannenbaum's blog](https://miketannenbaum.com/principles/){:target="\_blank"}, here is an incomplete list of my principles:
 
 # 1. Open and Transparent Work
 
