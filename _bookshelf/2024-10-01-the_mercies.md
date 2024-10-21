@@ -6,5 +6,5 @@ book_link: "https://hardcover.app/books/the-mercies"
 date: 2024-10-1
 status: 📚
 rating: "⭐️⭐️"
-tags: [historical, fiction]
+tags: [historical, fiction, LGBT]
 ---

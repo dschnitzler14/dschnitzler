@@ -6,5 +6,5 @@ book_link: "https://hardcover.app/books/the-binding"
 date: 2024-10-9
 status: 📚
 rating: "⭐️⭐️⭐️⭐️⭐️"
-tags: [historical, fiction, fantasy]
+tags: [historical, fiction, fantasy, LGBT]
 ---
