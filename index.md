@@ -34,10 +34,11 @@ I grew up in Vienna, Austria, but thanks to my American mum, I’ve always been 
 
 ## Right now, I’m:
 
-- Exploring how English animal names compare to their evolutionary relationships ([check it out here](/_research_projects/01_tree_of_life)).
-- Learning the foundations of machine learning to tackle a bigger project on bioimage analysis ([read more here](/_research_projects/01_bioimage)).
-- Passionate about making science open and accessible, working on projects aimed at fixing some of the problems in scientific publishing ([more on that here](/_research_projects/01_paperstars))
-- Looking at depression through an evolutionary lens ([read more here](/_research_projects/01_depression))
+- Focussing on my three passions:
+
+1. Passionate about making science open and accessible, working on projects aimed at fixing some of the problems in scientific publishing ([more on that here](https://dschnitzlervercel.vercel.app/digital-gardening/meta-science/){:target="\_blank"})
+2. Looking at depression through an evolutionary lens ([read more here](https://dschnitzlervercel.vercel.app/digital-gardening/depression-research-questions/){:target="\_blank"})
+3. Involved in a number of educational projects ([check it out here](https://dschnitzlervercel.vercel.app/digital-gardening/education/){:target="\_blank"})
 
 When I’m not deep in research, I love teaching and sharing knowledge. I'm contributing to the design of a course on the scientific process at the Medical School, as well as contributing to teaching (at least that's the plan), and I’m developing a cool interactive Shiny app to go along with a video textbook ([thoughts on that here](/_research_projects/01_stats_app)). I also get to co-supervise one of our amazing PhD students!
 
