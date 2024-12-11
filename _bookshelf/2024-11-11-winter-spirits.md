@@ -1,10 +1,10 @@
 ---
 layout: book_post
-book_title: "The Winter Spirits: Twelve Ghostly Tales for Festive Nights"
-book_author: "Various"
-book_link: "https://hardcover.app/books/the-winter-spirits"
+book_title: "Emily Wilde’s Encyclopaedia of Faeries"
+book_author: "Heather Fawcett"
+book_link: "https://hardcover.app/books/emily-wilde-s-encyclopaedia-of-faeries"
 date: 2024-11-11
 status: 📖
 rating: ""
-tags: [historical, fiction, fantasy, anthology]
+tags: [fiction, fantasy, anthology]
 ---
