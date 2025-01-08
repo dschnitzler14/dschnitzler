@@ -16,9 +16,9 @@ layout: default
 
 <!-- Filter Buttons -->
 <div id="filters">
-  <button class="simplebutton" onclick="filterPosts('all')">All</button>
-  <button class="simplebutton" onclick="filterPosts('{{ current_year }}')">{{ current_year }}</button>
   <button class="simplebutton" onclick="filterPosts('2025')">2025</button>
+  <button class="simplebutton" onclick="filterPosts('2024')">2024</button>
+  <button class="simplebutton" onclick="filterPosts('all')">All</button>
 </div>
 <br>
 
@@ -42,7 +42,6 @@ layout: default
 </div>
 
 <script>
-  // Default filter to show posts from the current year
   document.addEventListener("DOMContentLoaded", function () {
     filterPosts('{{ current_year }}');
   });
