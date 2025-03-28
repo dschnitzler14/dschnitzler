@@ -1,9 +1,19 @@
 ---
 layout: default
 ---
+
+{% include breadcrumbs.html %}
+
 <h1 class="post-headline">{{page.title}}</h1>
 <p class="meta"><small>{{page.date | date: '%B %d %Y'}}</small></p>
-<a href="{{page.github_link}}">Github Link</a>
+
+{% if page.github_link %}
+<div class="githubTile">
+    <a href="{{ page.github_link }}" target="_blank" rel="noopener">
+        💻 View on GitHub →
+    </a>
+</div>
+{% endif %}
 
 {{content}}
 

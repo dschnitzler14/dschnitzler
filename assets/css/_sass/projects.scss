@@ -12,7 +12,7 @@
   margin: -1rem -1rem;
 }
 
-.projectTile {
+.pillarTile {
   /* Minimum width of 200px and grow to fit available space */
   flex: 1 0 200px;
   border-radius: 15px;
@@ -26,33 +26,33 @@
   display: table;
 }
 
-.projectTile a {
+.pillarTile a {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
 }
 
-.projectTile a span {
+.pillarTile a span {
   display: flex;
   justify-content: center;
 }
 
-.projectTile a span h2 {
+.pillarTile a span h2 {
   font-size: 1.5rem;
   padding: 1rem;
   color: $projectbox-text;
 }
 
-.projectTile:hover a span h2 {
+.pillarTile:hover a span h2 {
   display: none;
 }
 
-.projectTile a span p {
+.pillarTile a span p {
   display: none;
 }
 
-.projectTile:hover a span p {
+.pillarTile:hover a span p {
   font-size: 1.2rem;
   display: flex;
   padding: 1rem;
@@ -62,19 +62,19 @@
 @include media-query($on-phone) {
   @media screen and (max-width: $on-phone){
 
-    .projectTile {
+    .pillarTile {
       height: 80px;
     }
 
-    .projectTile a span h2 {
+    .pillarTile a span h2 {
       font-size: 1.2rem;
     }
 
-    .projectTile:hover a span p {
+    .pillarTile:hover a span p {
       display: none;
     }
 
-    .projectTile:hover a span h2 {
+    .pillarTile:hover a span h2 {
       display: flex;
     }
 
@@ -85,19 +85,19 @@
 @include media-query($on-palm) {
   @media screen and (max-width: $on-palm){
 
-    .projectTile {
+    .pillarTile {
       height: 100px;
     }
 
-    .projectTile a span h2 {
+    .pillarTile a span h2 {
       font-size: 1.3rem;
     }
 
-    .projectTile:hover a span p {
+    .pillarTile:hover a span p {
       display: none;
     }
 
-    .projectTile:hover a span h2 {
+    .pillarTile:hover a span h2 {
       display: flex;
     }
 
@@ -119,3 +119,105 @@
 }
 
 //Based on: https://codepen.io/GeorgePark/pen/vdqYom
+
+.projectTile {
+  flex: 1 0 200px;
+  border-radius: 10px;
+  background: $projectbox;
+
+  @media (prefers-color-scheme: dark) {
+    background: $projectbox-dark;
+  }
+
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  display: table;
+}
+
+.projectTile a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
+.projectTile a span {
+  display: flex;
+  justify-content: center;
+}
+
+.projectTile a span h2 {
+  font-size: 1.2rem;
+  padding: 1rem;
+  color: $projectbox-text;
+}
+
+.projectTile:hover a span h2 {
+  display: none;
+}
+
+.projectTile a span p {
+  display: none;
+}
+
+.projectTile:hover a span p {
+  font-size: 1rem;
+  display: flex;
+  padding: 1rem;
+  color: $projectbox-text;
+}
+
+.githubTile {
+  margin: 1.5rem 0;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    background-color: #24292e;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+}
+
+.bottomLinkTile {
+  margin: 3rem 0 0;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ebbc00; // your signature yellow
+    color: #1a1a1a; // deep gray text for contrast
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #ffd60a; // brighter yellow on hover
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    a {
+      background-color: #ebbc00;
+      color: #000;
+
+      &:hover {
+        background-color: #ffd60a;
+      }
+    }
+  }
+}

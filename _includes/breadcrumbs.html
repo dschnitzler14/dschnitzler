@@ -1,0 +1,24 @@
+<nav class="breadcrumbs">
+    <a href="{{ '/research_pillars/' | relative_url }}">All Pillars</a>
+
+    {%- assign project_pillar_tag = page.pillar or page.tag -%}
+    {%- assign parent = site.research_projects | where: "slug", page.parent_project | first -%}
+
+    {%- if project_pillar_tag == nil and parent -%}
+    {%- assign project_pillar_tag = parent.tag or parent.pillar -%}
+    {%- endif -%}
+
+    {%- assign pillar = site.research_pillars | where: "tag", project_pillar_tag | first -%}
+    {%- if pillar -%}
+    &nbsp;→&nbsp;
+    <a href="{{ pillar.url | relative_url }}">{{ pillar.title }}</a>
+    {%- endif -%}
+
+    {%- if parent -%}
+    &nbsp;→&nbsp;
+    <a href="{{ parent.url | relative_url }}">{{ parent.title }}</a>
+    {%- endif -%}
+
+    &nbsp;→&nbsp;
+    <span>{{ page.title }}</span>
+</nav>

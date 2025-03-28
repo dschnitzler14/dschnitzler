@@ -75,9 +75,12 @@ compress_html:
 
 # Collections for other content
 collections:
+  research_pillars:
+    output: true
+    permalink: /research_pillars/:name/
   research_projects:
     output: true
-    permalink: /research_projects/:name/
+    #permalink: /research_pillars/:tag/:name/
   other_projects:
     output: true
     permalink: /other_projects/:name/
