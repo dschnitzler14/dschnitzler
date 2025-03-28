@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% include breadcrumbs.html %}
+
+<h1 class="post-headline">{{ page.title }}</h1>
+<p>{{ page.description }}</p>
+
+<div class="ProjectContainer">
+    <div class="gallery">
+
+        {% assign current_tag = page.title | downcase %}
+
+        {% for project in site.research_projects %}
+        {% if project.tag %}
+        {% assign project_tag = project.tag | downcase %}
+        {% if project_tag == current_tag %}
+        <div class="projectTile">
+            <a href="{{ project.url | relative_url }}">
+                <span>
+                    <h2>{{ project.title }}</h2>
+                    <br />
+                    <p>{{ project.description }}</p>
+                </span>
+            </a>
+        </div>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+
+    </div>
+</div>
