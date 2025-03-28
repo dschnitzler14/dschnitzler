@@ -48,7 +48,7 @@ I also have a few personal projects that keep me busy:
 
 - [**AURICLE:**](/_other_projects/auricle) My earring business, inspired by powerful women. I also donate earrings to survivors of sexual violence.
 - [**Dogs of Harrison Park Calendar:**](/_other_projects/dog_calendar) Since 2017, I’ve organized a charity calendar supporting the Edinburgh Dog and Cat Home. I’m expanding this idea to help other communities raise money too.
-- [**Lectures at Lunch:**](/_other_projects/lectures_at_lunch) Organizing virtual lunch talks for women across different fields, which is a great way to connect and share experiences.
+- [**Lectures at Lunch:**](/_other_projects/lectures_at_lunch) Organising virtual lunch talks for women across different fields, which is a great way to connect and share experiences.
 
 ## When I’m not working, I’m probably:
 

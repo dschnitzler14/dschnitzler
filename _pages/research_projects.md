@@ -5,8 +5,6 @@ permalink: /research_projects/
 published: true
 ---
 
-<p> Clicking a project will take you to the digital garden entry for each project </p>
-
 <div class="ProjectContainer">
 
     <div class="gallery">
