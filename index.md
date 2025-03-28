@@ -36,11 +36,11 @@ I grew up in Vienna, Austria, but thanks to my American mum, I’ve always been 
 
 - Focussing on my three passions:
 
-1. Passionate about making science open and accessible, working on projects aimed at fixing some of the problems in scientific publishing ([more on that here](https://dschnitzlervercel.vercel.app/digital-gardening/meta-science/){:target="\_blank"})
-2. Looking at depression through an evolutionary lens ([read more here](https://dschnitzlervercel.vercel.app/digital-gardening/depression-research-questions/){:target="\_blank"})
-3. Involved in a number of educational projects ([check it out here](https://dschnitzlervercel.vercel.app/digital-gardening/education/){:target="\_blank"})
+1. Passionate about making science open and accessible, working on projects aimed at fixing some of the problems in scientific publishing ([more on that here](/_research_pillars/03_meta-science))
+2. Looking at depression through an evolutionary lens ([read more here](/_research_pillars/02_depression))
+3. Involved in a number of educational projects ([check it out here](/_research_pillars/01_education))
 
-When I’m not deep in research, I love teaching and sharing knowledge. I'm contributing to the design of a course on the scientific process at the Medical School, as well as contributing to teaching (at least that's the plan), and I’m developing a cool interactive Shiny app to go along with a video textbook ([thoughts on that here](/_research_projects/01_stats_app)). I also get to co-supervise one of our amazing PhD students!
+When I’m not deep in research, I love teaching and sharing knowledge. I'm contributing to the design of a course on the scientific process at the Medical School, as well as contributing to teaching (at least that's the plan), and I’m developed a cool interactive Shiny app for students to learn the fundamentals of scientific research ([thoughts on that here](/_research_pillars/01_education/01_blinkr)). I also get to co-supervise one of our amazing PhD students!
 
 ## But it’s not all science!
 
@@ -52,7 +52,7 @@ I also have a few personal projects that keep me busy:
 
 ## When I’m not working, I’m probably:
 
-- Out on adventures with my two dogs, [Sid](https://www.instagram.com/sid_wags/){:target="\_blank"} and [Harry](https://www.instagram.com/harry.the.lamb/){:target="\_blank"}, exploring beautiful Scotland.
+- Out on adventures with my two dogs, Sid and Harry, exploring beautiful Scotland.
 - Buried in a good book (mostly fantasy—[here’s what I’m reading now](reading_blog)).
 - Collecting quirky salt and pepper shakers, because why not?
 - Engrossed in a new creative hobby - crochet, lino cutting/ printing, watercolour, embroidery, ... (not that I'm particularly good at any of these things, but that's not the point) or experimenting with new recipes in the kitchen!
