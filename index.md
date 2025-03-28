@@ -28,7 +28,7 @@ published: true
 
 # Hey there! I'm Danny,
 
-a post-doctoral researcher who loves blending science, coding, and creativity. I finished my PhD at the University of Edinburgh ([you can check it out here!](/_research_projects/10_phd)) and now, I’m diving into new research at the Medical School Berlin with [Melanie Stefan](https://melaniestefan.net/){:target="\_blank"}. I’m all about learning and growing, and sharing my journey along the way.
+a post-doctoral researcher who loves blending science, coding, and creativity. I finished my PhD at the University of Edinburgh and now, I’m diving into new research at the Medical School Berlin with [Melanie Stefan](https://melaniestefan.net/){:target="\_blank"}. I’m all about learning and growing, and sharing my journey along the way.
 
 I grew up in Vienna, Austria, but thanks to my American mum, I’ve always been fluent in English and German. In 2011, I made the leap to Scotland to study Biomedical Science at Aberdeen University. After graduating with my honours degree and integrated masters (MSci), I moved to Edinburgh to kick off my PhD, focusing on anxiety using a prenatal stress rat model. Through the course of my PhD I surprised myself and everyone around me when I really fell in love with coding.
 
