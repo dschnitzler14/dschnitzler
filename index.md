@@ -22,10 +22,6 @@ published: true
   {% endif %}
 </p>
 
-<p>
-  Check out the <a href="https://dschnitzlervercel.vercel.app/" target="_blank"> Digital Garden </a> for updates!
-</p>
-
 # Hey there! I'm Danny,
 
 a post-doctoral researcher who loves blending science, coding, and creativity. I finished my PhD at the University of Edinburgh and now, I’m diving into new research at the Medical School Berlin with [Melanie Stefan](https://melaniestefan.net/){:target="\_blank"}. I’m all about learning and growing, and sharing my journey along the way.
