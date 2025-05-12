@@ -5,6 +5,6 @@ book_author: "Jay Kristoff"
 book_link: "https://hardcover.app/books/godsgrave"
 date: 2025-05-04
 status: 📚
-rating: "⭐️⭐️⭐️⭐️"
+rating: "⭐️⭐️⭐️⭐️⭐️"
 tags: [fantasy]
 ---
