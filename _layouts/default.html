@@ -12,9 +12,13 @@
         <h1 class="post-headline">
             <a href="{{ site.baseurl }}/">{{ site.title }}</a>
         </h1>
-        <h3 class="post-description">{{site.description}}</h3>
+        <h3 class="post-description" style="margin-bottom: 1.5rem;">
+            {{site.description}}
+        </h3>
 
         {% include navigation.html %}
+
+        <hr class="nav-divider">
 
         {% seo %}
 

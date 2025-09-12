@@ -5,6 +5,6 @@ book_author: "S. A. Chakraborty"
 book_link: "https://hardcover.app/books/the-adventures-of-amina-al-sirafi"
 date: 2024-5-1
 status: 📚
-rating: "⭐️⭐️⭐️⭐️"
+rating: 4
 tags: [historical fiction, fantasy, adventure]
 ---

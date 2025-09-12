@@ -1,7 +1,7 @@
 ### your site title here
 
-title: Dr Danny Schnitzler
-description: 👩‍🔬 Post-doctoral Researcher | 🚀 Project Starter | 📍 Edinburgh & Berlin
+title: Dr Daniela Schnitzler
+description: <i class="fa-solid fa-microscope"></i> Post-doctoral Researcher | <i class="fa-solid fa-fire"></i> Project Starter | <i class="fa-solid fa-location-pin"></i> Edinburgh & Berlin
 
 baseurl: #"/dschnitzler"
 url: #"https://dschnitzler.co.uk" #custom url to be used instead of GitHub repository
@@ -20,7 +20,7 @@ reading_blog_paginate_path: /reading_blog/page:num/
 twitter:
 linkedin:
 stackoverflow:
-github:
+github: "https://github.com/dschnitzler14"
 researchgate:
 orcid:
 quora:

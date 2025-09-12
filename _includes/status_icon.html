@@ -1,0 +1,21 @@
+{%- comment -%}
+Usage: {% include status_icon.html status=post.status %}
+Outputs an FA icon plus a text label, falling back to the emoji if unmapped.
+{%- endcomment -%}
+
+{%- assign st = include.status | strip -%}
+{%- assign label = st -%}
+
+{%- case st -%}
+  {%- when "📖" -%}
+    {%- assign label = "Reading" -%}
+    <i class="fa-solid fa-book-open-reader status-icon" aria-hidden="true"></i>
+  {%- when "📚" -%}
+    {%- assign label = "Finished" -%}
+    <i class="fa-solid fa-book status-icon" aria-hidden="true"></i>
+  {%- when "❌" -%}
+    {%- assign label = "DNF" -%}
+    <i class="fa-solid fa-square-xmark" aria-hidden="true"></i>
+{%- endcase -%}
+
+<span class="status-label">{{ label }}</span>

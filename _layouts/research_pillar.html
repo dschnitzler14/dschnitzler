@@ -10,7 +10,7 @@ layout: default
 <div class="ProjectContainer">
     <div class="gallery">
 
-        {% assign current_tag = page.title | downcase %}
+        {% assign current_tag = page.tag | downcase %}
 
         {% for project in site.research_projects %}
         {% if project.tag %}
@@ -22,6 +22,8 @@ layout: default
                     <h2>{{ project.title }}</h2>
                     <br />
                     <p>{{ project.description }}</p>
+                    <br />
+                    <p>{{ project.status }}</p>
                 </span>
             </a>
         </div>

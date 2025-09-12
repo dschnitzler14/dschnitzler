@@ -1,0 +1,14 @@
+{%- comment -%}
+Usage: {% include rating_stars.html rating=post.rating %}
+Renders numeric rating (1–5) as Font Awesome stars.
+{%- endcomment -%}
+
+{%- assign count = include.rating | plus: 0 -%}
+
+{%- if count > 0 -%}
+<span class="rating-stars" aria-label="{{ count }} star{% if count != 1 %}s{% endif %}">
+    {%- for i in (1..count) -%}
+    <i class="fa-solid fa-star"></i>
+    {%- endfor -%}
+</span>
+{%- endif -%}

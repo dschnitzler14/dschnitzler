@@ -5,6 +5,6 @@ book_author: "Kirsty Logan"
 book_link: "https://hardcover.app/books/under-the-blue"
 date: 2024-2-1
 status: 📚
-rating: "⭐️⭐️⭐️⭐️"
+rating: 4
 tags: [dystopian, science fiction, speculative fiction]
 ---

@@ -3,62 +3,121 @@ layout: default
 ---
 <hr>
 {% assign current_year = "now" | date: "%Y" %}
-<div id="year-stats"></div>
 
-<p>Find me on <a href="https://hardcover.app/@dschnitz?referrer_id=18573" target="_blank">Hardcover</a></p>
+<div class="BooksContainer">
+  <div class="books-toolbar">
+    <div id="year-stats" class="books-stats"></div>
 
-<!-- Filter Buttons -->
-<div id="filters">
-  <button class="simplebutton" onclick="filterPosts('2025')">2025</button>
-  <button class="simplebutton" onclick="filterPosts('2024')">2024</button>
-  <button class="simplebutton" onclick="filterPosts('all')">All</button>
-</div>
-<br>
+    <div class="bottomLinkTile" style="margin-bottom: 2rem;">
+      <a href="https://hardcover.app/@dschnitz?referrer_id=18573" target="_blank" rel="noopener">Find Me on Hardcover</a>
+    </div>
 
-<!-- Book List -->
-<div class="reading-blog-list">
-  {% assign sorted_posts = site.bookshelf | sort: 'date' | reverse %}
-  {% for post in sorted_posts %}
-  {% assign post_year = post.date | date: "%Y" %}
-  <div class="post" data-year="{{ post_year }}">
-    <h3 style="margin-bottom: 5px;">
-      {{ post.date | date: '%B, %Y' }}:
-      <a href="{{ post.book_link }}">{{ post.book_title }}</a>
-      by {{ post.book_author }} | {{ post.status }}
-      {% if post.status == "📚" and post.rating %}
-      {{ post.rating }}
-      {% endif %}
-    </h3>
-    <p style="margin-top: 0;"><small>{{ post.tags | join: ", " }}</small></p>
+    <!-- Filter Buttons -->
+    <div id="filters" class="books-filters">
+      <button class="simplebutton" data-year="2025" onclick="filterBooks('2025', this)">2025</button>
+      <button class="simplebutton" data-year="2024" onclick="filterBooks('2024', this)">2024</button>
+      <button class="simplebutton" data-year="all" onclick="filterBooks('all',  this)">All</button>
+    </div>
   </div>
-  {% endfor %}
+
+  <!-- Books Gallery -->
+  <div class="gallery books-gallery">
+    {% assign sorted_posts = site.bookshelf | sort: 'date' | reverse %}
+    {% for post in sorted_posts %}
+    {% assign post_year = post.date | date: "%Y" %}
+    <article class="bookTile" data-year="{{ post_year }}">
+      {% comment %}
+      Click goes to external book_link if present; otherwise to the book’s page
+      {% endcomment %}
+      <a class="bookLink"
+        href="{% if post.book_link %}{{ post.book_link }}{% else %}{{ post.url | relative_url }}{% endif %}" {% if
+        post.book_link %} target="_blank" rel="noopener noreferrer" {% endif %}>
+
+        <!-- Cover (optional): use post.book_cover if you have it -->
+        {% if post.book_cover %}
+        <div class="bookCover">
+          <img src="{{ post.book_cover | relative_url }}" alt="Cover of {{ post.book_title }}">
+        </div>
+        {% else %}
+        <div class="bookCover bookCover--placeholder" aria-hidden="true">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+        {% endif %}
+
+        <div class="bookMeta">
+          <h3 class="bookTitle">{{ post.book_title }}</h3>
+          <p class="bookAuthor">by {{ post.book_author }}</p>
+        
+          <!-- Status always shows -->
+          <div class="bookRow">
+            <span class="bookStatus">
+              {% include status_icon.html status=post.status %}
+            </span>
+          </div>
+        
+          <!-- Rating: new line below status -->
+          {% if post.status == "📚" and post.rating %}
+          <div class="bookRow">
+            <span class="bookRating">
+              {% include rating_stars.html rating=post.rating %}
+            </span>
+          </div>
+          {% endif %}
+        
+            <!-- Date -->
+            <p class="bookDate">
+              <small>{{ post.date | date: '%B, %Y' }}</small>
+            </p>
+            
+            <!-- Tags -->
+            {% if post.tags and post.tags.size > 0 %}
+            <p class="bookTags">
+              <small>{{ post.tags | join: ", " }}</small>
+            </p>
+            {% endif %}
+            </small>
+          </p>
+        </div>
+      </a>
+    </article>
+    {% endfor %}
+  </div>
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    filterPosts('{{ current_year }}');
+    // Default to current year
+    filterBooks('{{ current_year }}');
+    // Mark active button
+    const btn = document.querySelector('.books-filters [data-year="{{ current_year }}"]')
+      || document.querySelector('.books-filters [data-year="all"]');
+    if (btn) setActiveFilterButton(btn);
   });
 
-  function filterPosts(year) {
-    var posts = document.querySelectorAll('.post');
-    var yearStats = document.getElementById('year-stats');
-    var booksCount = 0;
+  function setActiveFilterButton(button) {
+    document.querySelectorAll('.books-filters .simplebutton').forEach(b => b.classList.remove('active'));
+    button.classList.add('active');
+  }
 
-    posts.forEach(function (post) {
-      var postYear = post.getAttribute('data-year');
-      if (year === 'all' || postYear === year) {
-        post.style.display = 'block';
-        if (postYear === year) booksCount++;
-      } else {
-        post.style.display = 'none';
-      }
+  function filterBooks(year, button) {
+    const tiles = document.querySelectorAll('.bookTile');
+    const yearStats = document.getElementById('year-stats');
+    let count = 0;
+
+    tiles.forEach(tile => {
+      const y = tile.getAttribute('data-year');
+      const show = (year === 'all' || y === year);
+      tile.style.display = show ? '' : 'none';
+      if (show && year !== 'all') count++;
     });
 
     if (year === 'all') {
       yearStats.innerHTML = '';
     } else {
-      yearStats.innerHTML = `<p>In ${year}, I have read ${booksCount} books.</p>`;
+      yearStats.innerHTML = `<p>In ${year}, I have read ${count} book${count === 1 ? '' : 's'}.</p>`;
     }
+
+    if (button) setActiveFilterButton(button);
   }
 </script>
 

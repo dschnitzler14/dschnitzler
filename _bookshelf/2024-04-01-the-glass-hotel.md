@@ -5,6 +5,6 @@ book_author: "Emily St. John Mandel"
 book_link: "https://hardcover.app/books/the-glass-hotel"
 date: 2024-4-1
 status: 📚
-rating: "⭐️⭐️⭐️⭐️⭐️"
+rating: 5
 tags: [science fiction]
 ---

@@ -1,115 +1,42 @@
-/* Project Page */
+
+
+/* --- Variables (safe fallbacks; your theme may already define these) --- */
+$brand-color: #6b2f2f !default;
+/* burgundy accent */
+$projectbox: #fdfbf7 !default;
+/* parchment */
+$projectbox-dark: #1f1f1f !default;
+/* muted dark bg */
+$projectbox-text: #333333 !default;
+/* readable body text */
+
+/* --- Container --- */
 .ProjectContainer {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
 }
 
+/* --- Gallery layout (flex fallback) --- */
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  /* Compensate for excess margin on outer gallery flex items */
   margin: -1rem -1rem;
+  /* compensate child margins in flex fallback */
 }
 
-.pillarTile {
-  /* Minimum width of 200px and grow to fit available space */
-  flex: 1 0 200px;
-  border-radius: 15px;
-  background: $projectbox;
-  @media (prefers-color-scheme: dark) {
-    background: $projectbox-dark;
-  }
-  height: 400px;
-  width: 100%;
-  overflow: hidden;
-  display: table;
+.gallery,
+.gallery-item {
+  /* in grid mode these are reset; keep clean defaults here */
 }
 
-.pillarTile a {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-}
-
-.pillarTile a span {
-  display: flex;
-  justify-content: center;
-}
-
-.pillarTile a span h2 {
-  font-size: 1.5rem;
-  padding: 1rem;
-  color: $projectbox-text;
-}
-
-.pillarTile:hover a span h2 {
-  display: none;
-}
-
-.pillarTile a span p {
-  display: none;
-}
-
-.pillarTile:hover a span p {
-  font-size: 1.2rem;
-  display: flex;
-  padding: 1rem;
-  color: $projectbox-text;
-}
-
-@include media-query($on-phone) {
-  @media screen and (max-width: $on-phone){
-
-    .pillarTile {
-      height: 80px;
-    }
-
-    .pillarTile a span h2 {
-      font-size: 1.2rem;
-    }
-
-    .pillarTile:hover a span p {
-      display: none;
-    }
-
-    .pillarTile:hover a span h2 {
-      display: flex;
-    }
-
-
-  }
-}
-
-@include media-query($on-palm) {
-  @media screen and (max-width: $on-palm){
-
-    .pillarTile {
-      height: 100px;
-    }
-
-    .pillarTile a span h2 {
-      font-size: 1.3rem;
-    }
-
-    .pillarTile:hover a span p {
-      display: none;
-    }
-
-    .pillarTile:hover a span h2 {
-      display: flex;
-    }
-
-  }
-}
-
-
+/* Prefer CSS Grid when available */
 @supports (display: grid) {
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 2rem;
+    margin: 0;
   }
 
   .gallery,
@@ -118,106 +45,576 @@
   }
 }
 
-//Based on: https://codepen.io/GeorgePark/pen/vdqYom
-
+/* Project Tile — bookplate style, no overflow */
 .projectTile {
+  position: relative;
   flex: 1 0 200px;
-  border-radius: 10px;
-  background: $projectbox;
+  width: 100%;
+  min-height: 220px;
+  /* baseline height */
+  height: auto;
+  /* allow growth with content */
+  display: flex;
+  align-items: stretch;
+  text-align: center;
+  overflow: hidden;
 
-  @media (prefers-color-scheme: dark) {
-    background: $projectbox-dark;
+  /* bookplate look */
+  $paper-bg: #f8f4ec;
+  $paper-ink: #2b2520;
+
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px) 0 0 / 100% 28px,
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03), rgba(255, 255, 255, 0)),
+    $paper-bg;
+  color: $paper-ink;
+  border: 1px solid $brand-color;
+  border-radius: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid mix($brand-color, #ffffff, 65%);
+    pointer-events: none;
   }
 
-  height: 200px;
-  width: 100%;
-  overflow: hidden;
-  display: table;
+  transition: transform 0.18s ease,
+  box-shadow 0.18s ease,
+  background-color 0.18s ease;
+  will-change: transform;
 }
 
-.projectTile a {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-}
+@media (prefers-color-scheme: dark) {
+  .projectTile {
+    background:
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px) 0 0 / 100% 28px,
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.035), rgba(0, 0, 0, 0)),
+      mix($projectbox-dark, #000, 85%);
+    color: #eae6df;
+    border-color: $brand-color;
 
-.projectTile a span {
-  display: flex;
-  justify-content: center;
-}
-
-.projectTile a span h2 {
-  font-size: 1.2rem;
-  padding: 1rem;
-  color: $projectbox-text;
-}
-
-.projectTile:hover a span h2 {
-  display: none;
-}
-
-.projectTile a span p {
-  display: none;
-}
-
-.projectTile:hover a span p {
-  font-size: 1rem;
-  display: flex;
-  padding: 1rem;
-  color: $projectbox-text;
-}
-
-.githubTile {
-  margin: 1.5rem 0;
-  text-align: center;
-
-  a {
-    display: inline-block;
-    background-color: #24292e;
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-
-    &:hover {
-      background-color: #333;
+    &::before {
+      border-color: mix($brand-color, #000, 65%);
     }
   }
 }
 
+.projectTile:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.10);
+}
+
+/* link fills card and centers content */
+.projectTile a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.25rem;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+
+  /* prevent overflow on long words/URLs */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.projectTile a:focus-visible {
+  outline: 2px solid $brand-color;
+  outline-offset: 4px;
+}
+
+/* typography */
+.projectTile h2 {
+  font-family: Georgia, serif;
+  font-variant: small-caps;
+  letter-spacing: 0.5px;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  margin: 0;
+  color: $brand-color;
+  display: inline-block;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid mix($brand-color, #ffffff, 70%);
+}
+
+.projectTile p {
+  font-family: Georgia, serif;
+  font-size: 0.98rem;
+  line-height: 1.35;
+  margin: 0;
+  color: mix(#2b2520, #000, 90%);
+  max-width: 60ch;
+  /* readable line length */
+}
+
+/* small screens */
+@media screen and (max-width: 420px) {
+  .projectTile {
+    min-height: 0;
+  }
+
+  .projectTile a {
+    padding: 0.85rem 1rem;
+  }
+
+  .projectTile h2 {
+    font-size: 1.05rem;
+  }
+
+  .projectTile p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ================================
+   Pillar Tile (optional to match)
+   ================================ */
+/* Pillar Tile — matched bookplate style, no overflow */
+.pillarTile {
+  position: relative;
+  flex: 1 0 200px;
+  width: 100%;
+  min-height: 320px;
+  /* taller baseline for pillars */
+  height: auto;
+  /* allow growth with content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+
+  /* bookplate look */
+  $paper-bg: #f8f4ec;
+  $paper-ink: #2b2520;
+
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px) 0 0 / 100% 28px,
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03), rgba(255, 255, 255, 0)),
+    $paper-bg;
+  color: $paper-ink;
+  border: 1px solid $brand-color;
+  border-radius: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border: 1px solid mix($brand-color, #ffffff, 65%);
+    pointer-events: none;
+  }
+
+  transition: transform 0.18s ease,
+  box-shadow 0.18s ease,
+  background-color 0.18s ease;
+  will-change: transform;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pillarTile {
+    background:
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px) 0 0 / 100% 28px,
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.035), rgba(0, 0, 0, 0)),
+      mix($projectbox-dark, #000, 85%);
+    color: #eae6df;
+    border-color: $brand-color;
+
+    &::before {
+      border-color: mix($brand-color, #000, 65%);
+    }
+  }
+}
+
+.pillarTile:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.10);
+}
+
+/* full clickable area + wrapping */
+.pillarTile a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.pillarTile a:focus-visible {
+  outline: 2px solid $brand-color;
+  outline-offset: 4px;
+}
+
+.pillarTile h2 {
+  font-family: Georgia, serif;
+  font-variant: small-caps;
+  letter-spacing: 0.5px;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  margin: 0;
+  color: $brand-color;
+  display: inline-block;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid mix($brand-color, #ffffff, 70%);
+  max-width: 60ch;
+}
+
+.pillarTile p {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin: 0;
+  color: mix(#2b2520, #000, 90%);
+  max-width: 65ch;
+}
+
+/* small screens: let them grow naturally */
+@include media-query($on-phone) {
+  @media screen and (max-width: $on-phone) {
+    .pillarTile {
+      min-height: 160px;
+    }
+
+    .pillarTile h2 {
+      font-size: 1.2rem;
+    }
+
+    .pillarTile p {
+      display: none;
+    }
+
+    /* keep succinct on phones */
+  }
+}
+
+@include media-query($on-palm) {
+  @media screen and (max-width: $on-palm) {
+    .pillarTile {
+      min-height: 180px;
+    }
+
+    .pillarTile h2 {
+      font-size: 1.25rem;
+    }
+
+    .pillarTile p {
+      display: none;
+    }
+  }
+}
+/* ================================
+   GitHub Tile — academic style
+   ================================ */
+.githubTile {
+  margin: 2rem 0;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 0.6rem 1.25rem;
+    font-family: Georgia, serif;
+    font-weight: 700;
+    color: $brand-color;
+    background: #f8f4ec;
+    /* parchment */
+    border: 1px solid $brand-color;
+    /* outer rule */
+    border-radius: 0;
+    /* square corners */
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+    /* inner rule (bookplate frame) */
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border: 1px solid mix($brand-color, #ffffff, 65%);
+      pointer-events: none;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $brand-color;
+      outline-offset: 3px;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .githubTile a {
+    background: mix($projectbox-dark, #000, 85%);
+    color: #eae6df;
+    border-color: $brand-color;
+
+    &::before {
+      border-color: mix($brand-color, #000, 65%);
+    }
+  }
+}
+
+/* ================================
+   Bottom Link Tile — academic style
+   ================================ */
 .bottomLinkTile {
   margin: 3rem 0 0;
   text-align: center;
 
   a {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #ebbc00; // your signature yellow
-    color: #1a1a1a; // deep gray text for contrast
-    border-radius: 10px;
+    padding: 0.7rem 1.5rem;
+    font-family: Georgia, serif;
     font-weight: 700;
+    color: #1a1a1a;
+    background: #f8f4ec;
+    /* parchment base */
+    border: 1px solid $brand-color;
+    /* framed */
+    border-radius: 0;
+    position: relative;
     text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border: 1px solid mix($brand-color, #ffffff, 65%);
+      pointer-events: none;
+    }
 
     &:hover {
-      background-color: #ffd60a; // brighter yellow on hover
+      background: #fffbe8;
+      /* slight parchment lift */
       transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $brand-color;
+      outline-offset: 3px;
     }
   }
 
   @media (prefers-color-scheme: dark) {
     a {
-      background-color: #ebbc00;
-      color: #000;
+      background: mix($projectbox-dark, #000, 85%);
+      color: #eae6df;
+
+      &::before {
+        border-color: mix($brand-color, #000, 65%);
+      }
 
       &:hover {
-        background-color: #ffd60a;
+        background: mix($projectbox-dark, #fff, 5%);
       }
     }
+  }
+}
+
+/* ================================
+   Books — Gallery + Tiles (Old Academia)
+   ================================ */
+
+.BooksContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 1rem 2rem;
+}
+
+.books-toolbar {
+  text-align: center;
+  margin-bottom: 1rem;
+
+  .books-stats {
+    margin: 0.5rem 0 0.25rem;
+  }
+
+  .books-follow {
+    margin: 0.25rem 0 1rem;
+  }
+}
+
+.books-filters {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Reuse your grid behavior */
+.books-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 1.25rem;
+}
+
+.bookTile {
+  position: relative;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px) 0 0 / 100% 28px,
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03), rgba(255, 255, 255, 0)),
+    #f8f4ec;
+  border: 1px solid $brand-color;
+  border-radius: 0;
+  color: #2b2520;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid mix($brand-color, #ffffff, 65%);
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.10);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .bookTile {
+    background:
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px) 0 0 / 100% 28px,
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.035), rgba(0, 0, 0, 0)),
+      mix($projectbox-dark, #000, 85%);
+    color: #eae6df;
+
+    &::before {
+      border-color: mix($brand-color, #000, 65%);
+    }
+  }
+}
+
+/* Clickable area */
+.bookLink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.75rem 0.9rem 0.9rem;
+  height: 100%;
+  outline: none;
+
+  /* prevent overflow on long strings/URLs */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.bookLink:focus-visible {
+  outline: 2px solid $brand-color;
+  outline-offset: 4px;
+}
+
+/* Cover area (optional) */
+.bookCover {
+  aspect-ratio: 2 / 3;
+  /* consistent figure box */
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid mix($brand-color, #ffffff, 75%);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &--placeholder {
+    font-size: 2rem;
+    color: mix($brand-color, #2b2520, 65%);
+  }
+}
+
+/* Text meta */
+.bookMeta {
+  text-align: center;
+  padding: 0.25rem;
+
+  p {
+    margin: 0.2rem 0;
+  }
+}
+
+.bookTitle {
+  font-family: Georgia, serif;
+  font-variant: small-caps;
+  letter-spacing: 0.3px;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  margin: 0;
+  color: $brand-color;
+  display: inline-block;
+  padding-bottom: .15rem;
+  border-bottom: 1px solid mix($brand-color, #ffffff, 70%);
+}
+
+.bookAuthor {
+  font-family: Georgia, serif;
+  margin: 0.25rem 0 0.2rem;
+  color: mix(#2b2520, #000, 90%);
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.bookRow {
+  display: block;
+  /* stack instead of inline */
+  margin: 0.2rem 0;
+  /* breathing room between lines */
+}
+
+.bookStatus,
+.bookRating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.bookDate {
+  color: #666; // or a muted serif tone
+}
+
+.bookTags {
+  color: #444;
+  font-style: italic;
+}
+
+/* Buttons: active state for filters (uses your .simplebutton) */
+.books-filters .simplebutton.active {
+  background: $brand-color;
+  color: #fdfbf7;
+  border-color: $brand-color;
+}
+
+/* Small screens */
+@media screen and (max-width: 420px) {
+  .books-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 }

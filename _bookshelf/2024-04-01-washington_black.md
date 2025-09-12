@@ -5,6 +5,6 @@ book_author: "Esi Edugyan"
 book_link: "https://hardcover.app/books/washington-black"
 date: 2024-4-1
 status: 📚
-rating: "⭐️⭐️⭐️⭐️"
+rating: 4
 tags: [historical fiction, adventure]
 ---

@@ -21,7 +21,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Playfair", serif;
   font-weight: bold;
   line-height: 1.8;
   margin: 0;
@@ -173,40 +173,75 @@ blockquote {
 
 
 /* Button */
+/* Button — Old Academia style */
 .simplebutton {
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  outline: none;
+  margin: 1rem auto;
   cursor: pointer;
-  font-size: 18px;
-  /* Slightly bigger */
-  line-height: 24px;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 13px 23px;
-  border: 1px solid #ebbc00;
-  /* Border color */
-  background: #ebbc00;
-  /* Default background */
-  color: #222222;
-  /* Black sans-serif font */
-  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 
-  /* On hover */
-  &:hover {
-    background-color: #f7f7f7;
-    /* Light gray on hover */
-    color: #222222;
-    border-color: #222222;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  padding: 0.6rem 1.25rem;
+  color: $brand-color;
+  background: #f8f4ec;
+  /* parchment */
+  border: 1px solid $brand-color;
+  /* outer frame */
+  border-radius: 0;
+  /* square corners */
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+
+  /* inner rule for bookplate feel */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid mix($brand-color, #ffffff, 65%);
+    pointer-events: none;
   }
 
-  /* When selected */
+  &:hover {
+    background: #fffbe8;
+    /* subtle parchment lift */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $brand-color;
+    outline-offset: 3px;
+  }
+
   &.active {
-    background-color: #222222;
-    /* Inverse colors when selected */
-    color: #ebbc00;
-    border-color: #222222;
+    background: $brand-color;
+    color: #fdfbf7;
+    border-color: $brand-color;
+
+    &::before {
+      border-color: mix(#fdfbf7, $brand-color, 70%);
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .simplebutton {
+    background: mix($projectbox-dark, #000, 85%);
+    color: #eae6df;
+
+    &::before {
+      border-color: mix($brand-color, #000, 65%);
+    }
+
+    &:hover {
+      background: mix($projectbox-dark, #fff, 5%);
+    }
   }
 }
 
@@ -232,4 +267,45 @@ blockquote {
   span {
     font-weight: bold;
   }
+}
+
+.nav-divider {
+  border: 0;
+  border-top: 2px solid $brand-color;
+  /* use your brand color */
+  margin: 0;
+  /* remove extra spacing if needed */
+}
+
+.currently-reading {
+  border-left: 4px solid $brand-color;
+  background-color: #faf7f2;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+.currently-reading strong {
+  font-style: normal;
+  color: $brand-color;
+}
+
+.status-icon {
+  font: var(--fa-font-solid);
+  /* FA6 shorthand; ensures solid style */
+  margin-right: 0.35rem;
+}
+
+.status-label {
+  font-family: Georgia, serif;
+}
+
+.rating-stars {
+  color: $brand-color;
+  /* or gold-like #d4a017 */
+  font-size: 0.9em;
+}
+
+.rating-stars .fa-star {
+  margin-right: 2px;
 }

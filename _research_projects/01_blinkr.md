@@ -5,14 +5,28 @@ tag: education
 pillar: education
 description: Educational tool for students to plan, run, and analyse an experiment
 github_link: https://github.com/dschnitzler14/BlinkR
+status: Done | Paper Coming Soon!
 ---
+<hr />
+
 <div class="bottomLinkTile">
-  <a href="{{ '/research_projects/01_blinkr_reflections' | relative_url }}">
-    📖 Read my Reflections on BlinkR →
+  <a href="https://ds1405.shinyapps.io/blinkr_app/" target="_blank" rel="noopener">
+    <i class="fa-solid fa-eye"></i> View the BlinkR Demo
   </a>
 </div>
 
-<hr />
+<div class="bottomLinkTile">
+  <a href="{{ '/research_projects/01_blinkr_reflections' | relative_url }}">
+    <i class="fa-solid fa-pen-nib"></i> Read my Reflections on BlinkR
+  </a>
+</div>
+
+<div class="bottomLinkTile">
+  <a href="">
+    <i class="fa-solid fa-paper-plane"></i> Paper coming soon!
+  </a>
+</div>
+
 
 # About BlinkR
 

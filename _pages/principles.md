@@ -9,7 +9,7 @@ As inspired by [Mike Tannenbaum's blog](https://miketannenbaum.com/principles/){
 
 # 1. Open and Transparent Work
 
-As I'm currently exploring in my [digital garden](https://dschnitzlervercel.vercel.app/){:target="\_blank"}, I believe in openness and transparency in what I am doing. I believe that community makes any idea or project better and I always want to hear what others have to say!
+I believe in openness and transparency in what I am doing. I believe that community makes any idea or project better and I always want to hear what others have to say!
 
 # 2. Learn more!
 

@@ -5,6 +5,6 @@ book_author: "Sophie Keetch"
 book_link: "https://hardcover.app/books/morgan-is-my-name"
 date: 2024-8-1
 status: 📚
-rating: "⭐️⭐️⭐️⭐️⭐️"
+rating: 5
 tags: [fiction, fantasy, arthurian]
 ---

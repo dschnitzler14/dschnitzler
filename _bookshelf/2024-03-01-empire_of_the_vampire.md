@@ -5,6 +5,6 @@ book_author: "Jay Kristoff"
 book_link: "https://hardcover.app/books/empire-of-the-vampire"
 date: 2024-3-1
 status: 📚
-rating: "⭐️⭐️⭐️⭐️⭐️"
+rating: 5
 tags: [fantasy, horror, LGBT]
 ---

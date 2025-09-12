@@ -5,12 +5,6 @@ permalink: /research_pillars/
 published: true
 ---
 
-My interests can be split into three pillars:
-
-1. Depression Research
-2. Education and Educational Tools
-3. Meta-Science
-
 <div class="ProjectContainer">
 
   <div class="gallery">

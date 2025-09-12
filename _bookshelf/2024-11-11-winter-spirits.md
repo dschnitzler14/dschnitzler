@@ -5,6 +5,6 @@ book_author: "Various"
 book_link: "https://hardcover.app/books/the-winter-spirits"
 date: 2024-11-11
 status: 📚
-rating: "⭐️⭐️⭐️⭐️⭐️"
+rating: 5
 tags: [fiction, fantasy, anthology]
 ---

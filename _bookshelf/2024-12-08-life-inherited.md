@@ -5,6 +5,6 @@ book_author: "Rena Lipiner Katz"
 book_link: "https://www.goodreads.com/book/show/62977935-a-life-inherited"
 date: 2024-12-08
 status: 📚
-rating: "⭐️"
+rating: 1
 tags: [historical, fiction]
 ---

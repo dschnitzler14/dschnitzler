@@ -5,6 +5,6 @@ book_author: "Kiran Millwood Hargrave"
 book_link: "https://hardcover.app/books/the-mercies"
 date: 2024-10-1
 status: 📚
-rating: "⭐️⭐️"
+rating: 2
 tags: [historical, fiction, LGBT]
 ---

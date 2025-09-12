@@ -5,6 +5,6 @@ book_author: "Tove Jansson"
 book_link: "https://hardcover.app/books/the-summer-book"
 date: 2024-10-4
 status: 📚
-rating: "⭐️⭐️⭐️⭐️⭐️"
+rating: 5
 tags: [fiction]
 ---

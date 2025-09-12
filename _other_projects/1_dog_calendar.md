@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dogs of Harrison Park Calendar
-description: Community calendar started in 2017
+description: Community charity calendar started in 2017
 tag: 🐶
 cover-image: /assets/images/dog_calendar.png
 ---
