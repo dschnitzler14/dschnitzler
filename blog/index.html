@@ -5,8 +5,10 @@ layout: default
 <div class="article-list">
   {% assign sorted_posts = paginator.posts | sort: 'date' | reverse %}
   {% for post in sorted_posts %}
-  <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-  <p>{{ post.excerpt | strip_html }}</p>
+  <div class="article-item">
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    <span class="article-date">{{ post.date | date: '%B %d, %Y' }}</span>
+  </div>
   {% endfor %}
 </div>
 

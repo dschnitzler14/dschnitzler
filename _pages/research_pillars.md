@@ -4,6 +4,7 @@ layout: default
 permalink: /research_pillars/
 published: true
 ---
+<h2 class="post-headline">Science</h2>
 
 <div class="ProjectContainer">
 

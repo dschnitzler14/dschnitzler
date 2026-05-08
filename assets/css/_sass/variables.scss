@@ -1,22 +1,22 @@
-$base-font-family: 'Raleway', sans-serif;
+$base-font-family: 'Cormorant Garamond', serif;
 $base-font-size:   20px;
-$base-font-weight: 400;
+$base-font-weight: 100;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.7;
 
 $spacing-unit:     30px;
 $light-gray: gray;
-$text-color:       #333;
-$background-color: #eee7d7;
-$brand-color:      #8c2804;
+$text-color:       #000000;
+$background-color: #896247;
+$brand-color:      #4c2f0f;
 $projectbox-text:  #1e2126;
 
 // Color scheme for light
-$body-bg: #fdfdfd;
-$projectbox: #E3D8C4;
+$body-bg: #faeee1;
+$projectbox: #7b5000;
 $text-color: #333;
 
 // Color scheme for dark modes
-$body-bg-dark: #23272d;
-$projectbox-dark: lighten(#98a0ac, 2%);
-$text-color-dark: #98a0ac;
+$body-bg-dark: #4a4846;
+$projectbox-dark: lighten(#ffffff, 2%);
+$text-color-dark: #fdfdfd;

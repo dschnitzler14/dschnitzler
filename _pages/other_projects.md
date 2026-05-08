@@ -4,6 +4,7 @@ layout: default
 permalink: /other_projects/
 published: true
 ---
+<h2 class="post-headline">Beyond Science</h2>
 
 <div class="ProjectContainer">
 

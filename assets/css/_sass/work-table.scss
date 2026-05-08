@@ -1,0 +1,66 @@
+.work-table {
+    clear: both;
+    margin: 2rem 0;
+
+    .work-row {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        gap:5rem;
+        padding: 1.1rem 0;
+        border-top: 0.5px solid #c3bcb1;
+        align-items: center;
+
+        &:last-child {
+            border-bottom: 0.5px solid #c3bcb1;
+        }
+    }
+
+    .work-type {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        font-weight: 100;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #aaa;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .work-title {
+        font-style: italic;
+        padding-top: 0px;
+        margin-bottom: 4px;
+        margin-top: 0px;
+        font-size: 24px;
+
+        a {
+            color: $brand-color;
+            text-decoration: none;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .work-desc {
+        font-size: 20px;
+        color: #555;
+        line-height: 1.65;
+    }
+}
+
+.work-link {
+    display: inline-block;
+    margin-top: 0rem;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #aaa;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+
+    &:hover {
+        color: $brand-color;
+    }
+}

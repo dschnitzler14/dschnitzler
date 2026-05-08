@@ -1,6 +1,6 @@
 ---
 layout: research_pillar
-title: Meta-Science
-description: Science of science and how to fix an increasingly broken culture
+title: Metascience
+description: Science of science and thoughts about fixing an increasingly broken culture
 tag: meta
 ---

@@ -1,7 +1,7 @@
 ### your site title here
 
 title: Dr Daniela Schnitzler
-description: <i class="fa-solid fa-microscope"></i> Post-doctoral Researcher | <i class="fa-solid fa-fire"></i> Project Starter | <i class="fa-solid fa-location-pin"></i> Edinburgh & Berlin
+description: Still reading. Still thinking. Still human.
 
 baseurl: #"/dschnitzler"
 url: #"https://dschnitzler.co.uk" #custom url to be used instead of GitHub repository
@@ -18,14 +18,15 @@ reading_blog_paginate_path: /reading_blog/page:num/
 
 # Social media links in footer
 twitter:
-linkedin:
+linkedin: "daniela-schnitzler-012a2286"
 stackoverflow:
-github: "https://github.com/dschnitzler14"
+github: "dschnitzler14"
 researchgate:
 orcid:
 quora:
-instagram:
+instagram: "dschnitzler14/"
 facebook:
+paperstars: "https://paperstars.org"
 
 # Markdown
 highlighter: rouge
@@ -87,6 +88,9 @@ collections:
   bookshelf:
     output: true
     permalink: /reading_blog/:path/
+  blog:
+    output: true
+    #permalink: /blog/:year/:month/:day/:title/
 
 sass:
   sass_dir: /assets/css/_sass
@@ -98,7 +102,8 @@ include:
   - _research_projects
   - _research_pillars
   - _other_projects
-  - _bookshelf # Add _bookshelf here to include the folder
+  - _bookshelf
+  - _blog_post
 
 exclude:
   - README.md

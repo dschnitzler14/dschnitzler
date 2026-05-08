@@ -14,3 +14,33 @@ footer {
     color: #aaa;
     text-align: center;
 }
+
+.copy_caps {
+    color: #aaa;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+// Social links
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+
+    a {
+        font-family: "Cormorant Garamond", serif;
+        font-size: smaller;
+        font-weight: 100;
+        // text-transform: uppercase;
+        font-variant: small-caps;
+        letter-spacing: 0.1em;
+        color: $brand-color;
+        text-decoration: none;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
