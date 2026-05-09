@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5,h6 {
   text-transform: inherit;
 }
 
-.post-headline{
+.post-headline {
   font-family: "Playfair", serif;
   color: $brand-color;
   font-weight: bolder;
@@ -37,20 +37,42 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 1.8;
   margin: 0;
   text-transform: inherit;
+  font-size: clamp(0.5rem, 4.5vw, 2em);
+  white-space: nowrap;
 }
 
 .post-description {
   font-family: "Playfair", serif;
   font-style: italic;
-  font-size: 1em;
+  font-size: clamp(0.4rem, 2.5vw, 1em);
+  white-space: nowrap;
   color: $brand-color;
   margin-top: -0.5em;
   margin-bottom: 1.5em;
+}
+
+// .post-headline{
+//   font-family: "Playfair", serif;
+//   color: $brand-color;
+//   font-weight: bolder;
+//   font-style: italic;
+//   line-height: 1.8;
+//   margin: 0;
+//   text-transform: inherit;
+// }
+
+// .post-description {
+//   font-family: "Playfair", serif;
+//   font-style: italic;
+//   font-size: 1em;
+//   color: $brand-color;
+//   margin-top: -0.5em;
+//   margin-bottom: 1.5em;
 
   // @media (prefers-color-scheme: dark) {
   //   color: $text-color-dark;
   // }
-}
+// }
 a {
   color: $brand-color;
   text-decoration: none;
@@ -129,14 +151,24 @@ blockquote {
 }
 
 
-.headline, .post-headline {
-  font-size: 2em;
+.headline,
+.post-headline {
+  font-size: clamp(0.5rem, 8vw, 2em);
   margin-bottom: -0.4em;
 
   @include media-query($on-palm) {
-    font-size: 2em;
+    font-size: clamp(0.5rem, 8vw, 2em);
   }
 }
+
+// .headline, .post-headline {
+//   font-size: 2em;
+//   margin-bottom: -0.4em;
+
+//   @include media-query($on-palm) {
+//     font-size: 2em;
+//   }
+// }
 
 /* Pagination style in index/home page */
 .pagination {
@@ -454,8 +486,39 @@ blockquote {
 
 @include media-query($on-palm) {
   .header-top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .header-titles {
+    flex-shrink: 1;
+    min-width: 0;
+
+    .site-title {
+      font-size: clamp(0.9rem, 5vw, 1.6rem);
+      white-space: nowrap;
+    }
+
+    .site-description {
+      font-size: clamp(0.6rem, 3vw, 0.9rem);
+      white-space: nowrap;
+    }
+  }
+}
+
+@media screen and (max-width: $on-palm) {
+  body {
+    max-width: 100%;
+    padding: 1em 0.75em;
+    overflow-x: hidden;
+  }
+
+  .profile {
+    float: none;
+    display: block;
+    max-width: 60%;
+    margin: 0 auto 1.5rem auto;
   }
 }

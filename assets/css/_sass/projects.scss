@@ -125,11 +125,13 @@ $projectbox-text: #333333 !default;
   }
 
   .projectTile h2 {
+    font-size: 0.95rem;
     font-size: 1.05rem;
   }
 
   .projectTile p {
     font-size: 0.95rem;
+    display: block;
   }
 }
 /* ================================
