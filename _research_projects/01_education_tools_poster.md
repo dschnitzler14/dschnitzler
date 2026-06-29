@@ -19,14 +19,14 @@ link4_external: true
 
 <hr />
 
-<iframe src="/assets/pdfs/Supporting Undergraduate Scientific Literacy Skills Using Custom Web Apps.pdf" width="100%" height="700px"></iframe>
+You can click directly on "Parsible" and "BlinkR" within this pdf, or see the links below.
 
-## Relevant Links
+<iframe src="/assets/pdfs/Supporting Undergraduate Scientific Literacy Skills Using Custom Web Apps.pdf" width="100%" height="900px"></iframe>
 
-[**Parsible**](https://dschnitzler-parsible.share.connect.posit.cloud/)
+## [Click here for **Parsible**](https://dschnitzler-parsible.share.connect.posit.cloud/)
 
-[**BlinkR**](https://github.com/dschnitzler14/BlinkR)
+## [Click here for **BlinkR**](https://github.com/dschnitzler14/BlinkR)
 
-[**Paperstars**](https://paperstars.org/)
+## [Click here for **Paperstars**](https://paperstars.org/)
 
-
+<a href="{{ 'assets/misc/Poster-Refs.bib' | relative_url }}"  download>Bibliography ↓</a>
